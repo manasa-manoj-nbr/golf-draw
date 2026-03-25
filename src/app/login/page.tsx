@@ -137,16 +137,6 @@ export default function LoginPage() {
             </CardContent>
           </Card>
 
-          {/* Demo Credentials */}
-          <div className="mt-6 p-4 bg-bauhaus-blue/10 border-2 border-bauhaus-blue">
-            <p className="text-sm font-bold text-bauhaus-blue mb-2">Demo Credentials</p>
-            <p className="text-xs text-bauhaus-gray">
-              <strong>User:</strong> demo@golfdraw.com / demo123
-            </p>
-            <p className="text-xs text-bauhaus-gray">
-              <strong>Admin:</strong> admin@golfdraw.com / admin123
-            </p>
-          </div>
         </motion.div>
       </main>
 
