@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 250 250;
+    --foreground: 33 33 33;
+    --bauhaus-red: 229 57 53;
+    --bauhaus-blue: 30 136 229;
+    --bauhaus-yellow: 253 216 53;
+  }
+
+  * {
+    @apply border-bauhaus-black/10;
+  }
+
+  body {
+    @apply bg-bauhaus-white text-bauhaus-black antialiased;
+  }
+
+  ::selection {
+    @apply bg-bauhaus-yellow text-bauhaus-black;
+  }
+}
+
+@layer components {
+  .bauhaus-card {
+    @apply bg-white border-2 border-bauhaus-black shadow-bauhaus transition-all duration-200;
+  }
+
+  .bauhaus-card:hover {
+    @apply shadow-bauhaus-lg translate-x-[-2px] translate-y-[-2px];
+  }
+
+  .bauhaus-btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-bold text-white bg-bauhaus-red border-2 border-bauhaus-black shadow-bauhaus-sm transition-all duration-150 hover:shadow-bauhaus hover:translate-x-[-2px] hover:translate-y-[-2px] active:shadow-none active:translate-x-[2px] active:translate-y-[2px];
+  }
+
+  .bauhaus-btn-secondary {
+    @apply bauhaus-btn bg-bauhaus-blue;
+  }
+
+  .bauhaus-btn-accent {
+    @apply bauhaus-btn bg-bauhaus-yellow text-bauhaus-black;
+  }
+
+  .bauhaus-btn-outline {
+    @apply bauhaus-btn bg-white text-bauhaus-black;
+  }
+
+  .bauhaus-input {
+    @apply w-full px-4 py-3 border-2 border-bauhaus-black bg-white text-bauhaus-black placeholder:text-bauhaus-gray focus:outline-none focus:ring-2 focus:ring-bauhaus-blue focus:ring-offset-2 transition-all;
+  }
+
+  .bauhaus-label {
+    @apply block text-sm font-bold text-bauhaus-black mb-1;
+  }
+
+  .bauhaus-shape-circle {
+    @apply rounded-full;
+  }
+
+  .bauhaus-shape-square {
+    @apply rounded-none;
+  }
+
+  .bauhaus-divider {
+    @apply w-full h-1 bg-bauhaus-black;
+  }
+
+  .bauhaus-divider-red {
+    @apply bauhaus-divider bg-bauhaus-red;
+  }
+
+  .bauhaus-divider-blue {
+    @apply bauhaus-divider bg-bauhaus-blue;
+  }
+
+  .bauhaus-divider-yellow {
+    @apply bauhaus-divider bg-bauhaus-yellow;
+  }
+
+  .bauhaus-heading {
+    @apply font-display font-bold tracking-tight;
+  }
+
+  .bauhaus-grid {
+    @apply grid gap-6;
+  }
+
+  .bauhaus-section {
+    @apply py-16 md:py-24;
+  }
+
+  .bauhaus-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Score ball styles */
+  .score-ball {
+    @apply w-14 h-14 rounded-full flex items-center justify-center font-bold text-xl border-2 border-bauhaus-black shadow-bauhaus-sm;
+  }
+
+  .score-ball-red {
+    @apply score-ball bg-bauhaus-red text-white;
+  }
+
+  .score-ball-blue {
+    @apply score-ball bg-bauhaus-blue text-white;
+  }
+
+  .score-ball-yellow {
+    @apply score-ball bg-bauhaus-yellow text-bauhaus-black;
+  }
+
+  /* Animations */
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-4;
+  }
+
+  .animate-on-scroll.is-visible {
+    @apply opacity-100 translate-y-0 transition-all duration-500 ease-out;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-bauhaus {
+    background: linear-gradient(135deg, #E53935 0%, #1E88E5 50%, #FDD835 100%);
+  }
+
+  .pattern-grid {
+    background-image: 
+      linear-gradient(rgba(33, 33, 33, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(33, 33, 33, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .pattern-dots {
+    background-image: radial-gradient(rgba(33, 33, 33, 0.1) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E0E0E0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #212121;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E53935;
+}
