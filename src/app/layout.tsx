@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import '@/styles/globals.css'
 import { ToastContainer } from '@/components/ui'
+import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -50,6 +51,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-bauhaus-white font-sans antialiased">
         {children}
         <ToastContainer />
+        <Analytics />
       </body>
     </html>
   )
